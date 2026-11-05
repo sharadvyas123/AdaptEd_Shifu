@@ -313,9 +313,6 @@ function CallbackPage() {
 }
 
 function LandingPage() {
-  const { status, session } = useAuth()
-  if (status === 'loading') return <div className="phase-loading">Loading AdaptEd…</div>
-  if (session) return <Navigate to={postAuthRoute(session)} replace />
   return <Frame><div className="landing-story">
     <section className="landing-content landing-hero-section">
       <div className="landing-copy"><span className="section-kicker"><span className="live-dot" /> A MORE PERSONAL WAY TO LEARN</span><h1>Learning that<br /><span>moves with you.</span></h1><p>Build understanding one step at a time. AdaptEd helps learners see what they know, what to focus on next, and how to keep making progress.</p><div className="landing-actions"><Link className="landing-primary" to="/sign-up">Get started <ArrowRight size={18} /></Link><Link className="landing-secondary" to="/sign-in">I already have an account <ChevronRight size={17} /></Link><Link className="landing-secondary" to="/teacher-login">Teacher Login <ChevronRight size={17} /></Link></div><div className="landing-proof"><span><Check size={14} /> A path shaped around you</span><span><Check size={14} /> Progress you can understand</span></div></div>
